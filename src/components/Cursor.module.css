@@ -1,0 +1,22 @@
+.cursor {
+  position: fixed;
+  width: 8px; height: 8px;
+  background: var(--accent);
+
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.18s ease, height 0.18s ease, transform 0.1s ease;
+}
+
+.ring {
+  position: fixed;
+  width: 30px; height: 30px;
+  border: 1.5px solid rgba(15, 118, 110, 0.45);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.26s ease, height 0.26s ease;
+}

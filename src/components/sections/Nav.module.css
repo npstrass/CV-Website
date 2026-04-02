@@ -1,0 +1,58 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  padding: 1.5rem 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  background: none;
+  border: none;
+  cursor: none;
+  pointer-events: all;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.2s;
+}
+.logo span { color: var(--accent); }
+.logo:hover { color: var(--accent); }
+
+.contact {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  background: none;
+  border: none;
+  cursor: none;
+  pointer-events: all;
+  padding: 0.4rem 0;
+  transition: color 0.2s;
+  position: relative;
+}
+.contact::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.25s ease;
+}
+.contact:hover { color: var(--text-primary); }
+.contact:hover::after { transform: scaleX(1); }
+
+@media (max-width: 768px) {
+  .nav { padding: 1.25rem 1.5rem; }
+}
